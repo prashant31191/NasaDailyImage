@@ -1,92 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:orientation="horizontal"
-              android:baselineAligned="false">
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
 
-    <linearLaout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="left"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/imageTitle"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textColor="@color/image_title_color"
-            android:layout_marginTop="5dp"/>
-
-        <TextView
-            android:id="@+id/imageDate"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="10dp"
-            android:layout_marginBottom="5dp"/>
-    </linearLaout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:layout_weight="0"
-        android:layout_marginTop="5dp">
-
-        <Button android:text="@string/refresh"
-        android:onClick="onRefreshButtonClicked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/refreshButton" />
-
-        <Button
-            android:text="@string/setwallpaper"
-            android:onClick="onSetWallpaper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/setWallpaperButton"/>
-    </LinearLayout>
-    <ScrollView android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" >
-        <LinearLayout android:orientation="vertical"
-                      android:layout_width="fill_parent"
-                      android:layout_height="wrap_content"
-                      android:gravity="center_horizontal" >
-            <ImageView android:id="@+id/imageDisplay"
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:adjustViewBounds="true" />
-            <TextView android:id="@+id/imageDescription"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="5dp"
-        android:layout_marginTop="5dp"
-        android:background="#ff8D8D8D"
-        android:layout_weight="0">
+        android:gravity="left">
 
-        <Button
-            android:text="@string/refresh"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:onClick="onRefresh"/>
-
-        <Button
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/setwallpaper"
-            android:id="@+id/button"
-            android:onClick="onSetWallpaper"/>
+            android:gravity="left"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/imageTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"/>
+            <!--android:textColor="@color/image_title_color"-->
+
+            <TextView
+                android:id="@+id/imageDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_weight="0"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:text="@string/refresh"
+                android:onClick="onRefreshButtonClicked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/refreshButton"/>
+
+            <Button
+                android:text="@string/setwallpaper"
+                android:onClick="onSetWallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/setWallpaperButton"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/imageDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"/>
+
+                <TextView
+                    android:id="@+id/imageDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </LinearLayout>

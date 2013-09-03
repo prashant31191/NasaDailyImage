@@ -1,6 +1,7 @@
 package ru.vagafonova.example.NasaDailyImage;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.graphics.Bitmap;
